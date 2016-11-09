@@ -1,0 +1,39 @@
+Home Assignment
+Game Server Developer
+
+ 
+Home Assignment – Game Server Developer
+As part of applying to us, we would like you to complete the following code assignment using Java. We suggest that you spend around half a day to complete the tasks.
+Make two simple games that share common code
+You are tasked with creating two simple games that share common code. Attached with the mail should be a Maven project that you should use as a base.
+
+The first game (“slotgame”) should have the following rules:
+
+•	The player has an infinite amount of coins.
+•	The player bets 10 coins to play a normal game round
+•	In any round (free or normal), the player has a 30 % chance of winning back 20 coins.
+•	In any round (free or normal), the player also has a 10% chance of triggering a free round where the player does not have to pay for bet. The free round works in the same way as a normal round except it costs 0 coins. The free round should follow immediately after the normal round.
+•	The player can both win coins and free round at the same time.
+
+The second game (“bonusgame”) should have the following rules:
+
+•	The player has an infinite amount of coins.
+•	The player bets 10 coins to play a normal game round.
+•	In a normal game round, the player has a 10% chance of triggering a bonus round.
+•	If the player wins a bonus round, they will play a separate “box picking game”. In this game the player is given 5 boxes. One of the boxes will end the box picking game, while the rest contain 5 coins each. The player is allowed to open boxes until the game ends. The values should be assigned to the boxes randomly each time the player wins the bonus round.
+•	The player should not be able to win coins by any other means.
+
+Any code that you feel is reusable, or shared between the two games should be added into “framework”.
+
+Task 2: Collect and print the statistics from your games
+•	Simulate 1,000,000 rounds in each game and print the RTP of each game. “RTP” means return to player and describes how many coins the player won in relation to their bet. RTP is calculated by: (total win / total bet).
+•	You may print any additional statistics in addition to the RTP.
+•	“bonusgame” should not run “slotgame” rounds as part of its simulation.
+Optional
+•	Write Unit / Acceptance test cases for your games.
+•	It’s a merit if you can derive and prove the theoretical RTP for your games.
+
+
+Please package your correct working command-line program (A GUI is not needed) in a ZIP or RAR file and send it to Alexander Kovalchuk <alexander.kovalchuk@netent.com>.
+
+Good Luck!

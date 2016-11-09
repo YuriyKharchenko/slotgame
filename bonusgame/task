@@ -1,0 +1,5 @@
+•	The player has an infinite amount of coins.
+•	The player bets 10 coins to play a normal game round.
+•	In a normal game round, the player has a 10% chance of triggering a bonus round.
+•	If the player wins a bonus round, they will play a separate “box picking game”. In this game the player is given 5 boxes. One of the boxes will end the box picking game, while the rest contain 5 coins each. The player is allowed to open boxes until the game ends. The values should be assigned to the boxes randomly each time the player wins the bonus round.
+•	The player should not be able to win coins by any other means.
