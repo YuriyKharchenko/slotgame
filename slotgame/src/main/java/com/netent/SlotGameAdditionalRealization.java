@@ -51,7 +51,7 @@ public class SlotGameAdditionalRealization {
                         Long res = Engine.playFree();
                         startCoins += res;
                         freeRound--;
-                        if (Engine.winFreeRound()) freeRound++;
+                        if (Engine.winBonusRound()) freeRound++;
 
                         System.out.println("Now you have " + startCoins + " coins in your pocket and " + freeRound +
                                 " free  rounds");
@@ -66,7 +66,7 @@ public class SlotGameAdditionalRealization {
                                 betAmount);
                         Long res = Engine.playNormal();
                         startCoins += res;
-                        if (Engine.winFreeRound()) freeRound++;
+                        if (Engine.winBonusRound()) freeRound++;
                         System.out.println("Now you have " + startCoins + " coins in your pocket. Left " + freeRound +
                                 " free  rounds\"");
                     }else {

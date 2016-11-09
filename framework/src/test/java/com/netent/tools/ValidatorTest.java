@@ -1,7 +1,6 @@
-package com.netent;
+package com.netent.tools;
 
 
-import com.netent.tools.Validator;
 import org.junit.Assert;
 import org.junit.Test;
 
