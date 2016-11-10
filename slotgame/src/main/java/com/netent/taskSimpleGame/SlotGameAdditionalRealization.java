@@ -1,4 +1,4 @@
-package com.netent;
+package com.netent.taskSimpleGame;
 
 import com.netent.tools.Console;
 import com.netent.tools.Engine;

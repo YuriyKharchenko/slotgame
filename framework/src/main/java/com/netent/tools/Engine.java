@@ -7,10 +7,10 @@ public class Engine {
     public static Long playNormal() {
         double chance = Math.random() * 100;
         if (chance < 30) {
-            System.out.println("You WIN!");
+//            System.out.println("You WIN!");
             return 30L;
         } else {
-            System.out.println("OOPS, GAME OVER");
+//            System.out.println("OOPS, GAME OVER");
             return 0L;
         }
 
@@ -19,22 +19,21 @@ public class Engine {
     public static Long playFree() {
         double chance = Math.random() * 100;
         if (chance < 30) {
-            System.out.println("You WIN!");
+//            System.out.println("You WIN!");
             return 20L;
         } else {
-            System.out.println("OOPS, GAME OVER");
+//            System.out.println("OOPS, GAME OVER");
             return 0L;
         }
-
     }
 
     public static boolean winBonusRound() {
         double chance = Math.random() * 100;
-        if (chance <= 10) {
-            System.out.println("You win additional round! :)");
+        if (chance < 10) {
+//            System.out.println("You win additional round! :)");
             return true;
         } else {
-            System.out.println("You didn't win additional round! :(");
+//            System.out.println("You didn't win additional round! :(");
             return false;
         }
     }

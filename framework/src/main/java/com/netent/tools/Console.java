@@ -24,7 +24,7 @@ public class Console {
             } else if ((c == 'q')) continue;
 
             else {
-                throw new RuntimeException("Please enter correct number");
+                throw new NumberFormatException("Please enter correct number");
             }
         }
         return Long.parseLong(temp);
