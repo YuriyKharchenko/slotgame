@@ -3,21 +3,42 @@ package com.netent.tools;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
+import java.util.Arrays;
+import java.util.Collection;
+
+@RunWith(value = Parameterized.class)
 public class ValidatorTest {
 
-    Validator validator = new Validator();
+    public static final Validator validator = new Validator();
+    boolean expected;
+    String actual;
 
-    @Test
-    public void isNumberTest() throws Exception {
-        Assert.assertTrue(validator.isNumber("100"));
+    public ValidatorTest(boolean expected, String actual) {
+        this.expected = expected;
+        this.actual = actual;
     }
-    @Test
-    public void StringIsNumberTest() throws Exception {
-        Assert.assertFalse(validator.isNumber("first"));
+
+    @Parameterized.Parameters(name = "{index}:  (result is {1}") // тестовое сообщение
+    public static Collection<Object[]> data() {
+
+        Object[][] data = new Object[][]{
+                {true, "1000000000"},
+                {false, "Ukraine"},
+                {false, "http://example.com/dss"},
+                {false, "-925"},
+                {true, "0"},
+                {false, " "}
+
+        };
+        return Arrays.asList(data);
     }
-    @Test
-    public void backspaceIsNumberTest() throws Exception {
-        Assert.assertFalse(validator.isNumber(" "));
+
+    @Test(timeout = 3000)
+    public void testSortingMin() throws Exception {
+        Assert.assertEquals(expected, validator.isNumber(actual));
     }
+
 }
